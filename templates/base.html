@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Madlibs Story</title>
 </head>
+
 <body>
     <h1>Madlibs</h1>
-    <form action="/" method="post">
-
-        {% block content %}Body content/form goes here{% endblock %}
-        
-        <button type="submit">Submit</button>
-    </form>
+    {% block content %} this is where the main content will go {% endblock %}
+    <hr>
+    Made by Stephanie
 </body>
 </html>
