@@ -10,7 +10,9 @@ debug = DebugToolbarExtension(app)
 @app.route('/')
 def form_template():
     """Return homepage with form template"""
+    
     prompts = story.prompts
+    
     return render_template("form.html", prompts=prompts)
 
 @app.route('/story')
@@ -18,6 +20,5 @@ def create_story():
     """Show rendered story""" 
 
     story_text = story.generate(request.args)
-    print(story_text)
 
     return render_template("story.html", story_text=story_text)
